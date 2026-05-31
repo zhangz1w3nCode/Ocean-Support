@@ -242,14 +242,14 @@ description: 能力用于记录和管理 Agent 每次会话的完整存档，自
 - **摘要**: [200-300字摘要]
 - **使用次数(短期)**: 0
 - **使用次数(长期)**: 0
-- **详情**: [[`./timelines/{YYYY-MM-DD}/TIMELINE/[会话主题A].md`]]
+- **详情**: [[`.timelines/{YYYY-MM-DD}/TIMELINE/[会话主题A].md`]]
 
 ### [会话主题B]
 - **创建时间**: YYYY-MM-DD HH:mm:ss
 - **摘要**: [200-300字摘要]
 - **使用次数(短期)**: 0
 - **使用次数(长期)**: 0
-- **详情**: [[`./timelines/{YYYY-MM-DD}/TIMELINE/[会话主题B].md`]]
+- **详情**: [[`.timelines/{YYYY-MM-DD}/TIMELINE/[会话主题B].md`]]
 ```
 
 ### 会话详情文件格式
@@ -316,7 +316,7 @@ description: 能力用于记录和管理 Agent 每次会话的完整存档，自
 - **关键概念**: [需要理解的业务概念和术语]
 
 ### 关联记忆时间线
-- **[关联说明]**: [[`./timelines/{YYYY-MM-DD}/TIMELINE/{会话主题}.md`|reference]]
+- **[关联说明]**: [[`.timelines/{YYYY-MM-DD}/TIMELINE/{会话主题}.md`|reference]]
 ```
 
 ## 强制规则
@@ -349,10 +349,10 @@ description: 能力用于记录和管理 Agent 每次会话的完整存档，自
 - 纠正记录必须说明响应方式和调整方案
 
 ### 存档管理
-- 路径基准：当前项目根目录下的 `./timelines/`，禁止使用全局路径 `~/./timelines/`
-- 会话文件存储路径：`./timelines/{YYYY-MM-DD}/TIMELINE/`
+- 路径基准：当前项目根目录下的 `.timelines/`，禁止使用全局路径 `~/.timelines/`
+- 会话文件存储路径：`.timelines/{YYYY-MM-DD}/TIMELINE/`
 - 会话文件命名格式：`{会话主题}.md`
-- 索引文件路径：`./timelines/{YYYY-MM-DD}/INDEX.md`
+- 索引文件路径：`.timelines/{YYYY-MM-DD}/INDEX.md`
 - 每次会话结束后只能够创建会话详情文件并更新索引
 - 初始化存档根据需要手动触发
 - 存档文件必须包含完整的元数据
@@ -371,9 +371,9 @@ description: 能力用于记录和管理 Agent 每次会话的完整存档，自
 - 必须记录数据源同步状态
 
 ## 注意事项
-- **强制路径约束**：所有时间线的读取和存储路径必须是当前项目根目录下的 `./timelines/`，禁止使用全局路径 `~/./timelines/`。当前项目根目录即为 Agent 启动时的工作目录
+- **强制路径约束**：所有时间线的读取和存储路径必须是当前项目根目录下的 `.timelines/`，禁止使用全局路径 `~/.timelines/`。当前项目根目录即为 Agent 启动时的工作目录
 - 存档内容必须基于实际对话或真实历史数据 不得编造
-- `./timelines/{YYYY-MM-DD}/` 中的 `YYYY-MM-DD` 强制使用 Bash 查看日期命令获取
+- `.timelines/{YYYY-MM-DD}/` 中的 `YYYY-MM-DD` 强制使用 Bash 查看日期命令获取
 - 会话详情文件存储在 `{YYYY-MM-DD}/TIMELINE/` 文件夹下，文件名为会话主题
 - 通过 INDEX.md 索引定位会话，再通过 wikilink 通过文件路径跳转到详情文件 循环往复 最大查看深度为10层
 - Git提交记录提取建议限制时间范围，避免数据量过大
