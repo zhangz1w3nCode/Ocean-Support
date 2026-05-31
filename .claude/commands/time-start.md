@@ -1,6 +1,6 @@
 ---
 name: time-start
-description: 记忆时间线开始
+description: 记忆时间线开始召回和检索
 ---
 # 任务
 - 1.使用`能力`中定义的时间线搜索功能，对历史会话存档进行回忆检索
